@@ -1,0 +1,92 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("IMAGEN2.jpeg"); /* Asegúrate de que el nombre y la ruta sean correctos */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Ajustar al 100% de la altura de la pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0; /* Eliminar margen predeterminado */
+}
+
+.login-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 30px; /* Diseño más redondo */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 380px; /* Aumentar ligeramente el ancho */
+}
+
+h2 {
+    color: #1b5e20; /* Verde oscuro */
+    margin-bottom: 15px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid #4caf50; /* Verde medio */
+    border-radius: 15px; /* Bordes más redondeados */
+    outline: none;
+    font-size: 16px;
+    background-color: #f1f8e9; /* Verde muy claro */
+}
+
+label {
+    position: absolute;
+    left: 14px;
+    top: 16px;
+    color: #388e3c;
+    font-size: 14px;
+    transition: 0.3s;
+    pointer-events: none;
+}
+
+h1 {
+    color: #0b770b;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+h2 {
+    color: #0b770b;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+input:focus + label,
+input:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 10px;
+    font-size: 12px;
+    color: #1b5e20;
+    background: #ffffff;
+    padding: 0 5px;
+}
+
+.btn {
+    background-color: #00c853; /* Verde llamativo */
+    color: white;
+    border: none;
+    padding: 14px;
+    width: 100%;
+    border-radius: 30px; /* Botón más redondo */
+    cursor: pointer;
+    font-size: 18px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #009624; /* Verde más oscuro */
+    transform: scale(1.05);
+}

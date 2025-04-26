@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú con Botones</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .menu {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .menu button {
+            background-color: #4CAF50; /* Color verde */
+            color: white;
+            border: none;
+            padding: 15px 32px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+            border-radius: 5px;
+        }
+
+        .menu button:hover {
+            background-color: #45a049; /* Cambio de color al pasar el ratón */
+        }
+
+        .seccion {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="menu">
+        <button onclick="mostrarSeccion('plantas')">Plantas</button>
+        <button onclick="mostrarSeccion('plantas medicinales')">Plantas Medicinales</button>
+        <button onclick="mostrarSeccion('animales')">Animales</button>
+        <button onclick="mostrarSeccion('biodiversidad')">Biodiversidad</button>
+        <button onclick="mostrarSeccion('entorno natural')">Entorno Natural</button>
+    </div>
+
+    <div id="plantas" class="seccion active">
+        <h1>Bienvenido al sitio web</h1>
+        <p>Contenido de la página de plantas.</p>
+    </div>
+
+    <div id="plantas medicinales" class="seccion">
+        <h1>Plantas Medicinales</h1>
+        <p>Contenido de la página de plantas medicinales.</p>
+    </div>
+
+    <div id="animales" class="seccion">
+        <h1>Animales</h1>
+        <p>Contenido de la página de animales.</p>
+    </div>
+
+    <div id="biodiversidad" class="seccion">
+        <h1>Biodiversidad</h1>
+        <p>Contenido de la página de biodiversidad.</p>
+    </div>
+
+    <div id="entorno natural" class="seccion">
+        <h1>Entorno Natural</h1>
+        <p>Contenido de la página de entorno natural.</p>
+    </div>
+
+    <script>
+        function mostrarSeccion(id) {
+            // Ocultar todas las secciones
+            const secciones = document.querySelectorAll('.seccion');
+            secciones.forEach(function(seccion) {
+                seccion.classList.remove('active');
+            });
+
+            // Mostrar la sección correspondiente
+            const seccionMostrar = document.getElementById(id);
+            seccionMostrar.classList.add('active');
+        }
+    </script>
+
+<p>Las plantas son organismos esenciales para la vida en la Tierra, ya que desempeñan un papel crucial en los ecosistemas y en el bienestar humano. Aquí te dejo algunos puntos clave sobre las plantas:
+
+    Fotosíntesis: Las plantas realizan un proceso llamado fotosíntesis, mediante el cual convierten la luz solar en energía. A través de este proceso, las plantas absorben dióxido de carbono (CO₂) y liberan oxígeno (O₂), lo que es vital para la vida en el planeta.
+    
+    Componentes principales: Las plantas tienen varias partes esenciales para su funcionamiento:
+    
+    Raíces: Absorben agua y nutrientes del suelo.
+    
+    Tallo: Transporta agua, nutrientes y productos de la fotosíntesis.
+    
+    Hojas: Son el principal sitio de fotosíntesis y también ayudan en la transpiración.
+    
+    Flores y frutos: Son las estructuras reproductivas que permiten la creación de nuevas plantas.
+    
+    Clasificación: Existen varios tipos de plantas:
+    
+    Plantas vasculares: Tienen tejidos especializados para el transporte de agua y nutrientes (como helechos, árboles y flores).
+    
+    Plantas no vasculares: Carecen de estos tejidos y dependen de la difusión para el transporte de sustancias (como musgos).
+    
+    Importancia ecológica:
+    
+    Producen oxígeno: Son fundamentales para el ciclo del oxígeno.
+    
+    Sostenibilidad de los ecosistemas: Proveen alimento y hábitat a numerosos animales.
+    
+    Regulan el clima: Al absorber carbono, ayudan a mitigar el cambio climático.
+    
+    Usos de las plantas:
+    
+    Alimentación: Muchas plantas son fuente de alimentos básicos para los seres humanos, como cereales, frutas, vegetales, etc.
+    
+    Medicinales: Varias plantas tienen propiedades curativas que se usan en la medicina tradicional y moderna.
+    
+    Industriales: La madera, el caucho, los aceites esenciales y otros productos se derivan de plantas.
+    
+    Cuidado y conservación: Las plantas necesitan cuidados específicos según el tipo (luz, agua, temperatura). Además, muchas especies están en peligro de extinción debido a la deforestación y la contaminación, lo que hace que su conservación sea una prioridad.</p>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   
+
+    <div class="login-container">
+        <h2>Biokids</h2>
+        <form id="loginForm">
+            <div class="input-group">
+                <input type="text" id="username" name="username" required placeholder=" ">
+                <label for="username">Nombre(s):</label>
+            </div>
+            <div class="input-group">
+                <input type="text" id="apellido" name="apellido" required placeholder=" ">
+                <label for="apellido">Apellido:</label>
+            </div><div class="input-group">
+                <input type="email" id="email" name="email" required placeholder=" ">
+                <label for="email">Correo Electronico:</label>
+            </div>
+            <div class="input-group">
+                <input type="password" id="password" name="password" required placeholder=" ">
+                <label for="password">Contraseña:</label>
+            </div>
+            <button type="submit" class="btn">Crear Cuenta</button>
+        </form>
+
+    </div>
+
+    <script src="cuenta.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú con Botones</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .menu {
+            margin-bottom: 20px;
+        }
+
+        .menu button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 15px 32px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+            border-radius: 5px;
+        }
+
+        .menu button:hover {
+            background-color: #45a049;
+        }
+
+        .seccion {
+            display: none;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .active {
+            display: block;
+        }
+
+        p {
+            text-align: justify;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="menu">
+        <button onclick="mostrarSeccion('plantas')">Plantas</button>
+        <button onclick="mostrarSeccion('plantas-medicinales')">Plantas Medicinales</button>
+        <button onclick="mostrarSeccion('animales')">Animales</button>
+        <button onclick="mostrarSeccion('biodiversidad')">Biodiversidad</button>
+        <button onclick="mostrarSeccion('entorno-natural')">Entorno Natural</button>
+    </div>
+
+    <div id="plantas" class="seccion active">
+        <h1>Plantas</h1>
+        <p>Contenido de la página de plantas.</p>
+    </div>
+
+    <div id="plantas-medicinales" class="seccion">
+        <h1>Plantas Medicinales</h1>
+        <p>Contenido de la página de plantas medicinales.</p>
+    </div>
+
+    <div id="animales" class="seccion">
+        <h1>Animales</h1>
+        <p>Contenido de la página de animales.</p>
+    </div>
+
+    <div id="biodiversidad" class="seccion">
+        <h1>Biodiversidad</h1>
+        <p>Contenido de la página de biodiversidad.</p>
+    </div>
+
+    <div id="entorno-natural" class="seccion">
+        <h1>Entorno Natural</h1>
+        <p>Contenido de la página de entorno natural.</p>
+    </div>
+
+    <script>
+        function mostrarSeccion(id) {
+            const secciones = document.querySelectorAll('.seccion');
+            secciones.forEach(seccion => seccion.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+
+    <div class="seccion active">
+        <h1>Las Plantas</h1>
+        <p>Las plantas son organismos esenciales para la vida en la Tierra, ya que desempeñan un papel crucial en los ecosistemas y en el bienestar humano.</p>
+        <p><strong>Fotosíntesis:</strong> Las plantas convierten la luz solar en energía, absorbiendo dióxido de carbono (CO₂) y liberando oxígeno (O₂).</p>
+        <p><strong>Componentes principales:</strong></p>
+        <ul>
+            <li><strong>Raíces:</strong> Absorben agua y nutrientes del suelo.</li>
+            <li><strong>Tallo:</strong> Transporta agua, nutrientes y productos de la fotosíntesis.</li>
+            <li><strong>Hojas:</strong> Realizan la fotosíntesis y regulan la transpiración.</li>
+            <li><strong>Flores y frutos:</strong> Son estructuras reproductivas.</li>
+        </ul>
+        <p><strong>Clasificación:</strong></p>
+        <ul>
+            <li><strong>Plantas vasculares:</strong> Tienen tejidos especializados (helechos, árboles, flores).</li>
+            <li><strong>Plantas no vasculares:</strong> No tienen estos tejidos y dependen de la difusión (musgos).</li>
+        </ul>
+        <p><strong>Importancia ecológica:</strong></p>
+        <ul>
+            <li>Producen oxígeno.</li>
+            <li>Proveen alimento y hábitat.</li>
+            <li>Regulan el clima.</li>
+        </ul>
+        <p><strong>Usos de las plantas:</strong></p>
+        <ul>
+            <li>Alimentación (frutas, vegetales, cereales).</li>
+            <li>Medicina (plantas medicinales).</li>
+            <li>Industria (madera, caucho, aceites esenciales).</li>
+        </ul>
+        <p><strong>Conservación:</strong> Muchas especies están en peligro de extinción por deforestación y contaminación, por lo que su preservación es fundamental.</p>
+    </div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú con Botones</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .menu {
+            margin-bottom: 20px;
+        }
+
+        .menu button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 15px 32px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+            border-radius: 5px;
+        }
+
+        .menu button:hover {
+            background-color: #45a049;
+        }
+
+        .seccion {
+            display: none;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .active {
+            display: block;
+        }
+
+        p {
+            text-align: justify;
+            margin-bottom: 15px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #4caf50;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4caf50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="menu">
+        <button onclick="mostrarSeccion('plantas')">Plantas</button>
+        <button onclick="mostrarSeccion('plantas-medicinales')">Plantas Medicinales</button>
+        <button onclick="mostrarSeccion('animales')">Animales</button>
+        <button onclick="mostrarSeccion('biodiversidad')">Biodiversidad</button>
+        <button onclick="mostrarSeccion('entorno-natural')">Entorno Natural</button>
+    </div>
+
+    <div id="animales" class="seccion">
+        <h1>Animales</h1>
+        <p>Los animales son seres vivos que forman parte fundamental de los ecosistemas. Se caracterizan por su capacidad de moverse, alimentarse y reproducirse de diversas formas.</p>
+        <p><strong>Clasificación:</strong></p>
+        <ul>
+            <li><strong>Vertebrados:</strong> Tienen columna vertebral (mamíferos, aves, reptiles, anfibios, peces).</li>
+            <li><strong>Invertebrados:</strong> No tienen columna vertebral (insectos, moluscos, artrópodos).</li>
+        </ul>
+        <p><strong>Importancia ecológica:</strong></p>
+        <ul>
+            <li>Mantienen el equilibrio de los ecosistemas.</li>
+            <li>Polinizan las plantas.</li>
+            <li>Regulan poblaciones de otras especies.</li>
+        </ul>
+        <table>
+            <tr>
+                <th>Animal</th>
+                <th>Características</th>
+            </tr>
+            <tr>
+                <td><b>León</b></td>
+                <td>Carnívoro, vive en manadas y es conocido como el "rey de la selva".</td>
+            </tr>
+            <tr>
+                <td><b>Elefante</b></td>
+                <td>Herbívoro, el mamífero terrestre más grande, con gran memoria.</td>
+            </tr>
+            <tr>
+                <td><b>Mariposa Monarca</b></td>
+                <td>Famosa por sus largas migraciones y su papel en la polinización.</td>
+            </tr>
+            <tr>
+                <td><b>Delfín</b></td>
+                <td>Inteligente y sociable, se comunica con sonidos y vive en grupos.</td>
+            </tr>
+            <tr>
+                <td><b>Águila Real</b></td>
+                <td>Depredador en la cima de la cadena alimenticia, con gran visión.</td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        function mostrarSeccion(id) {
+            const secciones = document.querySelectorAll('.seccion');
+            secciones.forEach(seccion => seccion.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú con Botones</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .menu {
+            margin-bottom: 20px;
+        }
+
+        .menu button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 15px 32px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+            border-radius: 5px;
+        }
+
+        .menu button:hover {
+            background-color: #45a049;
+        }
+
+        .seccion {
+            display: none;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .active {
+            display: block;
+        }
+
+        p {
+            text-align: justify;
+            margin-bottom: 15px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #4caf50;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4caf50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="menu">
+        <button onclick="mostrarSeccion('plantas')">Plantas</button>
+        <button onclick="mostrarSeccion('plantas-medicinales')">Plantas Medicinales</button>
+        <button onclick="mostrarSeccion('animales')">Animales</button>
+        <button onclick="mostrarSeccion('biodiversidad')">Biodiversidad</button>
+        <button onclick="mostrarSeccion('entorno-natural')">Entorno Natural</button>
+    </div>
+
+    <div id="plantas" class="seccion active">
+        <h1>Plantas</h1>
+        <p>Contenido de la página de plantas.</p>
+    </div>
+
+    <div id="plantas-medicinales" class="seccion">
+        <div class="container">
+            <h1>Plantas Medicinales</h1>
+            <p>Las plantas medicinales han sido utilizadas por siglos para tratar diversas dolencias. Aquí te presentamos algunas de las más comunes y sus beneficios.</p>
+            <table>
+                <tr>
+                    <th>Planta</th>
+                    <th>Propiedades y usos</th>
+                </tr>
+                <tr>
+                    <td><b>Manzanilla</b></td>
+                    <td>Relajante, digestiva y antiinflamatoria.</td>
+                </tr>
+                <tr>
+                    <td><b>Menta</b></td>
+                    <td>Mejora la digestión y combate la náusea.</td>
+                </tr>
+                <tr>
+                    <td><b>Aloe Vera</b></td>
+                    <td>Cicatrizante y antiinflamatorio para la piel.</td>
+                </tr>
+                <tr>
+                    <td><b>Jengibre</b></td>
+                    <td>Alivia náuseas y fortalece el sistema inmunológico.</td>
+                </tr>
+                <tr>
+                    <td><b>Eucalipto</b></td>
+                    <td>Descongestionante para problemas respiratorios.</td>
+                </tr>
+                <tr>
+                    <td><b>Valeriana</b></td>
+                    <td>Calmante natural para el insomnio.</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div id="animales" class="seccion">
+        <h1>Animales</h1>
+        <p>Contenido de la página de animales.</p>
+    </div>
+
+    <div id="biodiversidad" class="seccion">
+        <h1>Biodiversidad</h1>
+        <p>Contenido de la página de biodiversidad.</p>
+    </div>
+
+    <div id="entorno-natural" class="seccion">
+        <h1>Entorno Natural</h1>
+        <p>Contenido de la página de entorno natural.</p>
+    </div>
+
+    <script>
+        function mostrarSeccion(id) {
+            const secciones = document.querySelectorAll('.seccion');
+            secciones.forEach(seccion => seccion.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú con Botones</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+            background-color: #e8f5e9;
+        }
+
+        .menu {
+            margin-bottom: 20px;
+        }
+
+        .menu button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 15px 32px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+            border-radius: 5px;
+        }
+
+        .menu button:hover {
+            background-color: #45a049;
+        }
+
+        .seccion {
+            display: none;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .active {
+            display: block;
+        }
+
+        h1 {
+            color: #2e7d32;
+        }
+
+        p {
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="menu">
+        <button onclick="mostrarSeccion('plantas')">Plantas</button>
+        <button onclick="mostrarSeccion('plantas-medicinales')">Plantas Medicinales</button>
+        <button onclick="mostrarSeccion('animales')">Animales</button>
+        <button onclick="mostrarSeccion('biodiversidad')">Biodiversidad</button>
+        <button onclick="mostrarSeccion('entorno-natural')">Entorno Natural</button>
+    </div>
+
+    <div id="entorno-natural" class="seccion">
+        <h1>Entorno Natural</h1>
+        <p>El entorno natural comprende todos los elementos físicos, biológicos y químicos que existen en la Tierra y que no han sido modificados por la acción del ser humano.</p>
+
+        <p><strong>Componentes del entorno natural:</strong></p>
+        <ul>
+            <li><strong>Atmosfera:</strong> Regula la temperatura y permite la vida mediante la provisión de oxígeno y otros gases esenciales.</li>
+            <li><strong>Hidrosfera:</strong> Incluye océanos, ríos, lagos y aguas subterráneas, fundamentales para la vida.</li>
+            <li><strong>Geosfera:</strong> Se refiere a la tierra firme, incluyendo montañas, suelos y minerales.</li>
+            <li><strong>Biosfera:</strong> Abarca todos los seres vivos, desde microorganismos hasta ecosistemas completos.</li>
+        </ul>
+
+        <p><strong>Importancia del entorno natural:</strong></p>
+        <ul>
+            <li>Proporciona recursos esenciales como agua, aire y suelo fértil.</li>
+            <li>Regula el clima y protege contra fenómenos naturales extremos.</li>
+            <li>Es el hogar de una inmensa biodiversidad de especies animales y vegetales.</li>
+            <li>Permite la producción de alimentos, medicinas y materiales para la construcción.</li>
+        </ul>
+
+        <p><strong>Principales amenazas al entorno natural:</strong></p>
+        <ul>
+            <li><strong>Deforestación:</strong> La tala masiva de árboles reduce el oxígeno y afecta la biodiversidad.</li>
+            <li><strong>Contaminación:</strong> Desechos industriales, plásticos y químicos deterioran los ecosistemas.</li>
+            <li><strong>Cambio climático:</strong> El aumento de la temperatura global afecta los hábitats naturales.</li>
+            <li><strong>Urbanización descontrolada:</strong> La expansión de ciudades destruye hábitats y ecosistemas.</li>
+        </ul>
+
+        <p><strong>Cómo proteger el entorno natural:</strong></p>
+        <ul>
+            <li>Reducir, reutilizar y reciclar los desechos.</li>
+            <li>Usar energías renovables como la solar y la eólica.</li>
+            <li>Apoyar programas de reforestación y conservación de bosques.</li>
+            <li>Disminuir el consumo de agua y energía en la vida cotidiana.</li>
+            <li>Fomentar la educación ambiental para generar conciencia.</li>
+        </ul>
+
+        <p>La conservación del entorno natural es una responsabilidad compartida entre gobiernos, empresas y ciudadanos. Pequeñas acciones diarias pueden marcar una gran diferencia en la protección de nuestro planeta.</p>
+    </div>
+
+    <script>
+        function mostrarSeccion(id) {
+            const secciones = document.querySelectorAll('.seccion');
+            secciones.forEach(seccion => seccion.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú con Botones</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+            background-color: #e8f5e9;
+        }
+
+        .menu {
+            margin-bottom: 20px;
+        }
+
+        .menu button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 15px 32px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+            border-radius: 5px;
+        }
+
+        .menu button:hover {
+            background-color: #45a049;
+        }
+
+        .seccion {
+            display: none;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .active {
+            display: block;
+        }
+
+        h1 {
+            color: #2e7d32;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #4caf50;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #4caf50;
+            color: white;
+        }
+
+        p {
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="menu">
+        <button onclick="mostrarSeccion('plantas')">Plantas</button>
+        <button onclick="mostrarSeccion('plantas-medicinales')">Plantas Medicinales</button>
+        <button onclick="mostrarSeccion('animales')">Animales</button>
+        <button onclick="mostrarSeccion('biodiversidad')">Biodiversidad</button>
+        <button onclick="mostrarSeccion('entorno-natural')">Entorno Natural</button>
+    </div>
+
+    <div id="biodiversidad" class="seccion">
+        <h1>Biodiversidad</h1>
+        <p>La biodiversidad se refiere a la variedad de vida en la Tierra, incluyendo los diferentes ecosistemas, especies y la diversidad genética dentro de cada especie. Es fundamental para el equilibrio ecológico y la supervivencia de todos los seres vivos.</p>
+
+        <p><strong>Importancia de la biodiversidad:</strong></p>
+        <ul>
+            <li>Proporciona alimentos, medicinas y recursos esenciales para los humanos.</li>
+            <li>Mantiene el equilibrio de los ecosistemas y regula el clima.</li>
+            <li>Ayuda en la polinización de cultivos y el reciclaje de nutrientes.</li>
+            <li>Favorece la estabilidad ecológica y reduce el impacto de desastres naturales.</li>
+        </ul>
+
+        <p><strong>Amenazas a la biodiversidad:</strong></p>
+        <ul>
+            <li><strong>Deforestación:</strong> La tala indiscriminada reduce el hábitat de muchas especies.</li>
+            <li><strong>Contaminación:</strong> Los residuos plásticos, pesticidas y otros contaminantes afectan la vida silvestre.</li>
+            <li><strong>Cambio climático:</strong> Alteraciones en las temperaturas afectan ecosistemas enteros.</li>
+            <li><strong>Especies invasoras:</strong> La introducción de especies no nativas puede afectar a los ecosistemas locales.</li>
+            <li><strong>Sobreexplotación:</strong> La caza, pesca y extracción excesiva amenazan muchas especies.</li>
+        </ul>
+
+        <p><strong>Estrategias de conservación:</strong></p>
+        <ul>
+            <li>Crear áreas protegidas como parques nacionales y reservas naturales.</li>
+            <li>Fomentar la educación ambiental para sensibilizar a la población.</li>
+            <li>Reducir el uso de plásticos y productos contaminantes.</li>
+            <li>Promover prácticas de agricultura y pesca sostenibles.</li>
+            <li>Reforestar áreas afectadas por la deforestación.</li>
+        </ul>
+
+        <p>La biodiversidad es clave para la vida en el planeta, y su conservación es responsabilidad de todos.</p>
+    </div>
+
+    <script>
+        function mostrarSeccion(id) {
+            const secciones = document.querySelectorAll('.seccion');
+            secciones.forEach(seccion => seccion.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+
+</body>
+</html>
+
+
+
+
+
