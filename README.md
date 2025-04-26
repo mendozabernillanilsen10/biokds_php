@@ -52,12 +52,8 @@ Valida siempre los datos desde el cliente y el servidor.
 Realiza respaldos periódicos de tu base de datos.
 
 📮 Contacto
-Si tienes dudas o sugerencias, puedes contactarme en [tu correo o LinkedIn].
+Si tienes dudas o sugerencias, puedes contactarme en [nilsenray10@gmail.com].
 
-Proyecto desarrollado por [Tu Nombre] 🚀
-
-yaml
-Copiar
-Editar
+Proyecto desarrollado por [nilsen mendoza] 🚀
 
 ---
